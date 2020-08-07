@@ -6,6 +6,8 @@ After=syslog.target network.target
 User={{ nifi_user }}
 Type=forking
 PIDFile={{ nifi_pid_file }}
+LimitNOFILE=50000
+LimitNPROC=10000
 # Run ExecStartPre with root-permissions
 PermissionsStartOnly=true
 ExecStartPre=-/usr/bin/mkdir -p {{ nifi_pid_dir }}
