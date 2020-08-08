@@ -196,18 +196,18 @@ nifi.security.truststore=
 nifi.security.truststoreType=
 nifi.security.truststorePasswd=
 {% endif -%}
-nifi.security.needClientAuth={{ nifi_need_client_auth | default('')}}
+nifi.security.needClientAuth={{ nifi_need_client_auth | default('') }}
 nifi.security.user.authorizer=managed-authorizer
 nifi.security.user.login.identity.provider=
 nifi.security.ocsp.responder.url=
 nifi.security.ocsp.responder.certificate=
 
 # OpenId Connect SSO Properties #
-nifi.security.user.oidc.discovery.url=
+nifi.security.user.oidc.discovery.url={{ nifi_security_user_oidc_discovery_url | default('') }}
 nifi.security.user.oidc.connect.timeout=5 secs
 nifi.security.user.oidc.read.timeout=5 secs
-nifi.security.user.oidc.client.id=
-nifi.security.user.oidc.client.secret=
+nifi.security.user.oidc.client.id={{ nifi_security_user_oidc_client_id | default('') }}
+nifi.security.user.oidc.client.secret={{ nifi_security_user_oidc_client_secret | default('') }}
 nifi.security.user.oidc.preferred.jwsalgorithm=
 nifi.security.user.oidc.additional.scopes=
 nifi.security.user.oidc.claim.identifying.user=

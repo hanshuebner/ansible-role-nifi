@@ -115,6 +115,9 @@ Role Variables
     nifi_security_truststore: "{{ nifi_conf_dir }}/truststore.jks"
     nifi_security_truststoreType: jks
     nifi_security_truststorePasswd: ''
+    nifi_security_user_oidc_discovery_url:
+    nifi_security_user_oidc_client_id:
+    nifi_security_user_oidc_client_secret:
 
     # Logback logging levels and settings
     nifi_log_app_file_retention: 10
